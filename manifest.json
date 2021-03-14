@@ -1,6 +1,6 @@
 { 
-    "name": "Getting Started Example", 
-    "description": "Build an Extension!", 
+    "name": "Searchbar", 
+    "description": "Makes it easy to search sites.", 
     "version": "1.0", 
     "manifest_version": 3,
     "background": {
