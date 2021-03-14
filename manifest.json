@@ -10,5 +10,14 @@
     "action": {
       "default_popup": "popup.html"
     },
-    "options_page": "options.html"
+    "options_page": "options.html",
+    "commands": {
+      "trigger_search": {
+        "suggested_key": {
+          "default": "Ctrl+Shift+K",
+          "mac": "Command+Shift+K"
+        },
+        "description": "Focus on the search box"
+      }
+    }
 }
