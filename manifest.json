@@ -7,7 +7,6 @@
       "service_worker": "background.js"
     },
     "permissions": ["storage", "activeTab", "webNavigation", "scripting"],
-    "omnibox": { "keyword" : "test" },
     "action": {
       "default_popup": "popup.html"
     },

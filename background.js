@@ -3,19 +3,32 @@ function navigate(url) {
     chrome.tabs.update(tabs[0].id, {url: url})
   });
 }
+
 let color = '#3aa757'; 
 
 chrome.runtime.onInstalled.addListener(() => { 
   chrome.storage.sync.set({ color }); 
-  console.log('Default background color set to %cgreen', `color: ${color}`); 
+  //console.log('Default background color set to %cgreen', `color: ${color}`); 
 });
 
 chrome.commands.onCommand.addListener(function(command) {
-  if (command == "trigger_search") {
-    console.log(window);
-  }
-});
+  if (command == "trigger_search") {  
+    console.log("Command:", command);
 
-chrome.omnibox.onInputEntered.addListener(function(text) {
-  navigate("https://www.google.com");
+   chrome.tabs.query({active: true, currentWindow:true}, function(tabs) {
+      //console.log(tabs);
+    });
+
+    chrome.tabs.query({active: true, currentWindow:true}, function(tabs){
+      console.log("Command:", command);
+      console.log(tabs);
+      chrome.scripting.executeScript(
+        {
+          target: {tabId: tabs[0].id},
+          files: ['search.js']
+        },
+        (injectionResults) => { console.log("searched", injectionResults) }
+      );
+    });
+  }
 });
