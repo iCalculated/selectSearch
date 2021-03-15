@@ -12,22 +12,15 @@ chrome.runtime.onInstalled.addListener(() => {
 });
 
 chrome.commands.onCommand.addListener(function(command) {
+
   if (command == "trigger_search") {  
-    console.log("Command:", command);
-
-   chrome.tabs.query({active: true, currentWindow:true}, function(tabs) {
-      //console.log(tabs);
-    });
-
     chrome.tabs.query({active: true, currentWindow:true}, function(tabs){
-      console.log("Command:", command);
-      console.log(tabs);
       chrome.scripting.executeScript(
         {
           target: {tabId: tabs[0].id},
           files: ['search.js']
         },
-        (injectionResults) => { console.log("searched", injectionResults) }
+        () => {}
       );
     });
   }
