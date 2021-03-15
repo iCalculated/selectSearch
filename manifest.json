@@ -1,19 +1,16 @@
 { 
     "name": "Searchbar", 
-    "description": "Makes it easy to search sites.", 
-    "version": "1.0", 
+    "description": "Automatically select search bars with Ctrl+Shift+K", 
+    "version": "1.1", 
     "manifest_version": 3,
     "background": {
       "service_worker": "background.js"
     },
-    "permissions": ["storage", "activeTab", "webNavigation", "scripting"],
-    "action": {
-      "default_popup": "popup.html"
-    },
-    "options_page": "options.html",
+    "permissions": ["activeTab", "scripting"],
     "icons": {
-      "48": "/images/mag48.png",
+      "16": "/images/mag16.png",
       "32": "/images/mag32.png",
+      "48": "/images/mag48.png",
       "64": "/images/mag64.png",
       "128": "/images/mag128.png"
     },
