@@ -20,7 +20,7 @@
           "default": "Ctrl+Shift+K",
           "mac": "Command+Shift+K"
         },
-        "description": "Focus on the search box"
+        "description": "Focus on most site's search boxes"
       }
     }
 }
