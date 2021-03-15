@@ -1,4 +1,4 @@
-# Searchbar
+# Selectsearch
 
 A rather simplistic extension written for Slingshot's Open Source Sunday competition.
 
