@@ -11,6 +11,12 @@
       "default_popup": "popup.html"
     },
     "options_page": "options.html",
+    "icons": {
+      "48": "/images/mag48.png",
+      "32": "/images/mag32.png",
+      "64": "/images/mag64.png",
+      "128": "/images/mag128.png"
+    },
     "commands": {
       "trigger_search": {
         "suggested_key": {
